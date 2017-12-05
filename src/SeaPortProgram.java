@@ -1,5 +1,5 @@
 /* Course: CMSC 335
- * Assignment: Project 3 - SeaPort Program
+ * Assignment: Project 4 - SeaPort Program
  * File: SeaPortProgram.java
  * Author: Ngozi Young
  * Date: 10/27/2017
