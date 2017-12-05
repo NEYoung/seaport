@@ -1,0 +1,70 @@
+// File: aSPad.txt
+// Data file for SeaPort projects
+// Date: Sun Jul 10 10:33:24 EDT 2016
+// parameters: 3 4 5 6 7 8
+//   ports, docks, pships, cships, jobs, persons
+
+// port   name index parent(null)
+//    port   <string> <int> <int>
+port Sialkot 10000 0
+
+// dock   name index parent(port)
+//    dock   <string> <int> <int>
+  dock Pier_2 20002 10000 30002
+  dock Pier_1 20001 10000 30001
+  dock Pier_3 20003 10000 30003
+  dock Pier_4 20004 10000 30004
+  dock Pier_0 20000 10000 30000
+
+// pship  name index parent(dock/port) weight length width draft numPassengers numRooms numOccupied
+//    pship  <string> <int> <int> <double> <double> <double> <double> <int> <int> <int>
+    pship      "ZZZ_Hysterics" 30002 20002 103.71 327.92 56.43 30.23 3212 917 917
+    pship                Glory 30000 20000 137.28 399.53 128.71 39.37 1059 670 529
+    pship                 Yeah 30004 20004 200.98 446.92 95.29 25.08 210 723 105
+    pship                Blare 30003 20003 228.31 264.15 114.17 39.85 798 500 399
+
+// cship  name index parent(dock/port) weight length width draft cargoWeight cargoVolume cargoValue
+//    cship  <string> <int> <int> <double> <double> <double> <double> <double> <double> <double>
+    cship              Vomiter 40004 10000 136.79 491.46 106.72 18.97 216.16 189.62 688.14
+    cship              Ragouts 40001 10000 89.37 450.62 80.62 30.90 147.58 152.89 438.61
+    cship          Fecundation 40005 10000 137.79 197.96 39.03 44.99 157.24 148.62 236.23
+    cship               Sphere 40000 10000 221.17 204.53 39.71 27.28 151.63 159.88 978.54
+
+// person name index parent skill
+//    person <string> <int> <int> <string>
+    person                 Tina 50008 10000 painter
+    person                 Cody 50002 10000 electrician
+    person               Oliver 50000 10000 clerk
+    person                Marty 50006 10000 electrician
+    person                Terri 50001 10000 driver
+    person                 Otis 50003 10000 mate
+    person               Jimmie 50007 10000 mate
+    person            Charlotte 50004 10000 carpenter
+    person               Eileen 50005 10000 captain
+    person               Eileen 50009 10000 janitor
+    person               Emily 50010 10000 driver
+    person               Frank 50011 10000 cleaner
+    person               Bob 50012 10000 engineer
+    person               Jim 50013 10000 crew
+    person               Steve 50014 10000 stevedore
+
+// job    name index parent duration [skill]+ (one or more, matches skill in person, may repeat)
+//    job    <string> <int> <int> <double> [<string>]+
+    job         Job_50_35_84 60011 40000 41.00 janitor driver captain
+    job         Job_24_68_12 60016 40005 43.07  mate cleaner
+    job         Job_66_52_86 60015 40004 76.84  crew
+    job         Job_99_51_86 60002 30002 92.69  driver
+    job         Job_93_37_24 60012 40000 118.88  engineer crew inspector
+    job         Job_97_75_28 60009 30004 102.80  cleaner painter janitor
+    job         Job_73_11_66 60004 30002 79.02  
+    job         Job_78_32_64 60014 40004 33.43  mate clerk stevedore carpenter
+    job         Job_51_14_13 60008 30004 24.52  stevedore
+    job         Job_36_65_73 60006 30003 106.58  driver driver
+    job         Job_48_89_46 60000 30000 80.34  janitor
+    job         Job_97_15_76 60001 30000 112.83  driver
+    job         Job_69_42_40 60010 40000 102.22  clerk
+    job         Job_61_35_13 60017 30005 116.22  
+    job         Job_46_56_48 60005 30003 56.60  engineer
+    job         Job_48_65_77 60003 30002 39.86  electrician driver
+    job         Job_29_12_70 60007 30003 32.75  painter
+    job         Job_77_43_75 60013 40001 107.11  electrician inspector
