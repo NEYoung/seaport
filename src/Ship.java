@@ -45,7 +45,7 @@ class Ship extends Thing {
         return parentThing instanceof Dock && ((Dock) parentThing).getShip() == this;
     }
 
-    // Keeps track of which jobs are in progress and ensures only one job is progressing in each dock
+    // Keeps track of which jobs are in progress and ensures only one job is progressing in each dock and shi
     public boolean doJob() {
         boolean doingJob = false;
         synchronized (lock) {

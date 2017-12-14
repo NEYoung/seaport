@@ -52,7 +52,10 @@ public class Job extends Thing implements Runnable {
             parentShip = (Ship) this.parentThing;
             initJobElements();
             tobeRemoved = this;
-            new Thread(this).start();
+            Thread thread = new Thread(this);
+            thread.setName(this.getName());
+            thread.start();
+
         }
     }
 
@@ -159,7 +162,7 @@ public class Job extends Thing implements Runnable {
             double duration = stopTime - time;
             // Simulates the progressing of the job
             while(time < stopTime && noKillFlag) {
-                waitFor(100);
+                waitFor(10); // TODO: change back to 100 before submitting project
                 if(goFlag) {
                     showStatus(Status.RUNNING);
                     time += 100;
